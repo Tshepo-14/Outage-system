@@ -1,0 +1,78 @@
+<php
+require_once "config.php"
+session_start();
+
+    $username=$_POST["user"];
+    $password=$_POST["pass"];
+    $username_err = $password_err = $login_err = "";
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        //username
+        if(empty(trim($_POST["username"]))){
+            $username_err = "Please enter username.";
+        } else{
+            $username = trim($_POST["username"]);
+        }
+        //password
+        if(empty(trim($_POST["password"]))){
+            $password_err = "Please enter your password.";
+        } else{
+            $password = trim($_POST["password"]);
+        }
+        
+
+    }
+
+
+
+?>
+
+<html>
+<head>
+    <title> Outage system</title>
+    <link rel="stylesheet" href="style10.css">
+   
+   
+</head>
+<body>
+    <div class="main">
+        <h1>        Outage System       </h1>
+            <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST"></form>
+                <label> UserName: </label>
+                <input type="text" id="user" name="user"><br><br>
+                <label> Password : </label>
+                <input type="password" id="pass" name="pass"><br><br>
+                <input type =  "submit" id = "btn" value = "Login" />  
+                <br>
+                <a href="index.html"> User </a>
+            </form>
+        </div>
+    </div>
+   
+    <script scr="script.js"> </script>
+    <script src="verify.js"> </script>
+    <script>
+          function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+    </script>
+</body>
+    
+</html>

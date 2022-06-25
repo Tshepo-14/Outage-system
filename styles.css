@@ -14,7 +14,8 @@
 
 table{
     border-collapse: collapse;
-    text-align: left;
+    text-align: center;
+    align-items: center;
 }
 tr {
     border-bottom: 1px solid #cbcbcb;
@@ -22,7 +23,9 @@ tr {
 th, td{
     border: none;
     padding: 20px;
+    color:aliceblue;
+
 }
 tr:hover {
-    background: #F5F5F5;
+    background:navajowhite;
 }

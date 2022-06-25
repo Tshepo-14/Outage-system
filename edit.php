@@ -30,13 +30,18 @@ if(isset($_GET['edit'])){
 <head>
     <title> Outage system</title>
     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   
     
 
 </head>
 <body>
       
         <form name="f4" action = "update.php" method = "POST"> 
-            <div class="main">
+            <div class="container p-5 my-5 bg-dark text-white" style="text-align:center; border-radius: 25px;">
                     <h1> Edit outages </h1> 
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <b>  </b> <input type="text" name="city" id="city" value="<?php echo $city; ?>" required/> 
@@ -44,10 +49,11 @@ if(isset($_GET['edit'])){
                         <textarea name="dff" id="dff" style="width:250px;height:150px; resize:none" wrap="virtual" required><?php echo $outage; ?></textarea>
                         <br></br>
                         <?php if ($update == true): ?>
-	                        <button class="btn" type="submit" name="update" >update</button>
+	                        <button class="btn-primary" type="submit" name="update" >update</button>
                         <?php else: ?>
-	                        <button class="btn" type="submit" name="save" >Save</button>
+	                        <button class="btn-primary" type="submit" name="save" >Save</button>
                         <?php endif ?>
+                        <br>
                         <br><a href= "main.php"> Admin Home </a></br>
                         <br><a href="logout.php"> Logout </a></br>
 

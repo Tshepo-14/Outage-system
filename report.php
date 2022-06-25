@@ -7,12 +7,17 @@ require_once "connection.php";
 <head>
     <title> Outage system</title>
     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   
    
    
 </head>
 <body>
     
-        <div class="main">
+<div class="container p-5 my-5 bg-dark text-white" style="text-align:center; border-radius: 25px;">
            <?php
                 $resul=$_GET['button'];
                 $comp=0;

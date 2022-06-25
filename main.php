@@ -17,23 +17,28 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 <head>
     <title> Outage system</title>
     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   
 </head>
 <body>
         <form name="f4" action = "add.php" method = "POST"> 
-            <div class="main">
+            <div class="container p-5 my-5 bg-dark text-white" style="text-align:center; border-radius: 25px;">
                 <h2> Current outages </h2> 
                 <hr> </hr> 
-                    <table>
+                    <table  class="table table-hover" style="color:aqua;">
 	                    <thead>
                             <tr>
-                                <th>City        </th>
-                                <th colspan="2" >Action</th>
+                                <th style="text-align: center; font:white;">City        </th>
+                                <th style="text-align: center; font:white;" colspan="2" >Action</th>
                             </tr>
                         </thead>
                         <?php
                         while($row = mysqli_fetch_array($result)) { ?>
                             <tr>
-                                <td><?php echo $row['serviceID']; ?></td>
+                                <td style="text-align: center; font:white;"><?php echo $row['serviceID']; ?></td>
                                 <p>
                                 <td>
                                     <a href="edit.php?edit=<?php echo $row['nmb'];?>" class="edit_btn" >Edit</a>

@@ -28,12 +28,12 @@
                 <br>
                 <div class="input-group" style="width: 50%; align-items: center; align-content: center; margin: auto;">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input id="user" type="text" class="form-control" name="email" placeholder="Email">
+                    <input id="user" type="text" class="form-control" name="user" placeholder="Email" required>
                 </div>
                 <br>
                 <div class="input-group" style="width: 50%; align-items: center; align-content: center; margin: auto;">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="pass" type="password" class="form-control" name="password" placeholder="Password">
+                    <input id="pass" type="password" class="form-control" name="pass" placeholder="Password" required>
                 </div>
                 <br>
                 <input type =  "submit" class="btn-primary">  
